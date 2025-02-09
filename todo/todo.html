@@ -8,13 +8,26 @@
     <title>To Do</title>
   </head>
   <body>
-    <div>
-      <h1>What is on you'r mind!</h1>
+    <h1>To Do</h1>
+    <div class="wrapper">
       <!-- form to submit -->
+      <form>
+        <input
+          type="text"
+          id="todo-input"
+          placeholder="What is on you'r mind!"
+          autocomplete="off"
+        />
+      </form>
+      <button id="add-button">ADD</button>
       <!-- list of todos-->
-      <ul>
+      <ul id="todo-list">
         <!-- list should have classes and ids-->
-        <li>Always here</li>
+        <li class="todo">
+          <input type="checkbox" id="todo-1" />
+          <label for="todo-1" class="todo-text">Always here</label>
+          <button class="delete-button">X</button>
+        </li>
       </ul>
     </div>
   </body>
