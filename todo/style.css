@@ -5,3 +5,24 @@
   --accent-color: #00ffff;
   --text-color: #e1e1e1;
 }
+
+/* Global reset  */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16pt;
+  color: var(--text-color);
+}
+
+body {
+  min-height: 100vh;
+  padding: 10px;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
