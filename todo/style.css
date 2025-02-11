@@ -1,3 +1,7 @@
-* {
-  color: blue;
+:root {
+  --background: #15161a;
+  --primary-color: #1f1f22;
+  --secondary-color: #444;
+  --accent-color: #00ffff;
+  --text-color: #e1e1e1;
 }
