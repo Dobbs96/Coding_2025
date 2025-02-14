@@ -88,6 +88,7 @@ form {
   margin: 10px;
   padding: 0 16px;
   background-color: var(--primary-color);
+  color: var(--text-color);
   border-radius: 750px;
   display: flex;
   align-items: center;
@@ -97,6 +98,7 @@ form {
   padding: 12px;
   padding-right: 0;
   flex-grow: 1; /* Take as much space in parent element*/
+  transition: 300ms ease;
 }
 
 .delete-button,
@@ -108,7 +110,7 @@ form {
   justify-content: center;
   align-items: center;
   font-size: medium;
-  color: var(--secondary-color);
+  color: var(--text-color);
 }
 
 .delete-button:hover {
@@ -126,8 +128,16 @@ input[type="checkbox"] {
   border: 2px solid var(--secondary-color);
   border-radius: 750px;
   flex-shrink: 0;
+  transition: 300ms ease;
 }
 
 input[type="checkbox"]:checked {
   background-color: var(--accent-color);
 }
+
+input[type="checkbox"]:checked ~ .todo-text {
+  text-decoration: line-through;
+  color: var(--secondary-color);
+}
+
+/* Make responsive in future */
