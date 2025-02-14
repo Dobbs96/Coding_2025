@@ -37,7 +37,6 @@ h1 {
 }
 
 .wrapper {
-  background-color: #1e1f253c;
   width: 700px;
   max-width: 100%;
   display: flex;
@@ -59,4 +58,43 @@ h1 {
 
 #todo-input:focus {
   outline: none;
+}
+
+button,
+label,
+input {
+  cursor: pointer;
+  border-radius: 750px;
+}
+
+form {
+  position: relative;
+}
+/* add-button was not within the form and making the form relative makes button position inside the form top right side */
+#add-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 750px;
+  background-color: var(--accent-color);
+  height: 100%;
+  font: inherit;
+  font-weight: 700;
+  color: var(--background);
+  width: 17%;
+}
+
+.todo {
+  margin: 10px;
+  padding: 0 16px;
+  background-color: var(--primary-color);
+  border-radius: 750px;
+  display: flex;
+  align-items: center;
+}
+
+.todo .todo-text {
+  padding: 12px;
+  padding-right: 0;
+  flex-grow: 1; /* Take as much space in parent element*/
 }
