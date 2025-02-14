@@ -3,7 +3,7 @@
   --primary-color: #1f1f22;
   --secondary-color: #444;
   --accent-color: #00ffff;
-  --text-color: #e1e1e1;
+  --text-color: #898989;
 }
 
 /* Global reset  */
@@ -25,4 +25,38 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+h1 {
+  margin: 100px 0px 20px 0px;
+  font-size: 3rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--accent-color);
+}
+
+.wrapper {
+  background-color: #1e1f253c;
+  width: 700px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#todo-input {
+  box-sizing: border-box;
+  border-radius: 750px;
+  padding: 10px 20px;
+  width: 100%;
+  border: 2px solid var(--secondary-color);
+  font: inherit;
+  color: var(--text-color);
+  caret-color: var(--accent-color);
+  background: none;
+}
+
+#todo-input:focus {
+  outline: none;
 }
