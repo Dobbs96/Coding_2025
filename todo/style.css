@@ -98,3 +98,36 @@ form {
   padding-right: 0;
   flex-grow: 1; /* Take as much space in parent element*/
 }
+
+.delete-button,
+.update-button {
+  padding: 4px;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: medium;
+  color: var(--secondary-color);
+}
+
+.delete-button:hover {
+  color: red;
+}
+
+.update-button:hover {
+  color: var(--accent-color);
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--secondary-color);
+  border-radius: 750px;
+  flex-shrink: 0;
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--accent-color);
+}
