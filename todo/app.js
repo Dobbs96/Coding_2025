@@ -8,16 +8,17 @@ let allTodos = getTodos();
 updateTodoList();
 
 todoForm.addEventListener("submit", (e) => {
-  e.preventDefault();
+  e.preventDefault(); //to prevent website to refresh after each submit
   addToDo();
 });
 
+// addTodo- Take the value of the data inside the input. Data should have text and checked. Store that data into and array. Make sure data is saved into Local Storage.
 function addToDo() {
   const toDoText = todoInput.value.trim();
   if (toDoText.length > 0) {
     const todoObject = {
       text: toDoText,
-      completed: false,
+      checked: false,
     };
     allTodos.push(todoObject);
     updateTodoList();
@@ -26,7 +27,7 @@ function addToDo() {
   }
 }
 
-// update form to be able to use allTodos array
+// updateTodoList- Update array to have data from input data
 function updateTodoList() {
   todoListUL.innerHTML = "";
   allTodos.forEach((todo, todoIndex) => {
@@ -35,6 +36,7 @@ function updateTodoList() {
   });
 }
 
+// createTodoItem- Create elements to add data from the array into the unordered list. The element will then need to have a listening event to change data in the full form. Return should be that List Item.
 function createTodoItem(todo, todoIndex) {
   const todoLI = document.createElement("li");
   todoLI.className = "todo";
@@ -55,26 +57,34 @@ function createTodoItem(todo, todoIndex) {
   });
   const checkbox = todoLI.querySelector("input");
   checkbox.addEventListener("change", () => {
-    allTodos[todoIndex].completed = checkbox.checked;
+    allTodos[todoIndex].checked = checkbox.checked;
     saveTodos();
   });
-  checkbox.checked = todo.completed;
+  checkbox.checked = todo.checked;
   return todoLI;
 }
 
+// saveTodos- be able to read JSON as string
 function saveTodos() {
   const todosJSON = JSON.stringify(allTodos);
   localStorage.setItem("todos", todosJSON);
 }
 
+// getTodos- Get Item fromt he local Storage. Returns a string.
 function getTodos() {
   const todos = localStorage.getItem("todos") || [];
   return JSON.parse(todos);
 }
 
+// updateTodo- Selete tezt in that List Item and update seleted text to be change what user wants to change.
 // function updateTodo(todoIndex) {
-
+///// get data from seleted update index
+///// modify text to new data
+///// update button change to save
+///// after save clicked change back to update
 // }
+
+// deleteTodo- Fliter lest to remove List Item seleted.
 function deleteTodo(todoIndex) {
   allTodos = allTodos.filter((_, i) => i !== todoIndex);
   saveTodos();
