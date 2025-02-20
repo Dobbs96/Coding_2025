@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="app.js" defer></script>
-    <title>To Do</title>
-  </head>
-  <body>
-    <h1>To Do</h1>
-    <div class="wrapper">
-      <!-- form to submit -->
-      <form>
-        <input
-          type="text"
-          id="todo-input"
-          placeholder="What is on you'r mind!"
-          autocomplete="off"
-        />
-        <button id="add-button">ADD</button>
-      </form>
-      <!-- list of todos-->
-      <ul id="todo-list">
-        <!-- Empty for JS to add -->
-      </ul>
-    </div>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="app.js" defer></script>
+        <title>To Do</title>
+    </head>
+    <body>
+        <h1>To Do</h1>
+        <div class="wrapper">
+            <!-- form to submit -->
+            <form id="todo-form">
+                <input
+                    type="text"
+                    id="todo-input"
+                    placeholder="What is on you'r mind!"
+                    autocomplete="off"
+                />
+                <button id="add-button">ADD</button>
+            </form>
+            <!-- list of todos-->
+            <ul id="todo-list">
+                <!-- Empty for JS to add -->
+            </ul>
+            <!-- For pop up update button -->
+        </div>
+        <!-- <div id="update-form-wrapper">
+            <form>
+                <input type="text" id="update-form" autocomplete="off" />
+            </form>
+        </div> -->
+    </body>
 </html>

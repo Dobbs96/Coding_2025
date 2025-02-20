@@ -1,143 +1,148 @@
 :root {
-  --background: #15161a;
-  --primary-color: #1f1f22;
-  --secondary-color: #444;
-  --accent-color: #00ffff;
-  --text-color: #898989;
+    --background: #15161a;
+    --primary-color: #1f1f22;
+    --secondary-color: #444;
+    --accent-color: #00ffff;
+    --text-color: #898989;
 }
 
 /* Global reset  */
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 html {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 16pt;
-  color: var(--text-color);
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16pt;
+    color: var(--text-color);
 }
 
 body {
-  min-height: 100vh;
-  padding: 10px;
-  background-color: var(--background);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    min-height: 100vh;
+    padding: 10px;
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1 {
-  margin: 100px 0px 20px 0px;
-  font-size: 3rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  text-align: center;
-  color: var(--accent-color);
+    margin: 100px 0px 20px 0px;
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--accent-color);
 }
 
 .wrapper {
-  width: 700px;
-  max-width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+    width: 700px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 #todo-input {
-  box-sizing: border-box;
-  border-radius: 750px;
-  padding: 10px 20px;
-  width: 100%;
-  border: 2px solid var(--secondary-color);
-  font: inherit;
-  color: var(--text-color);
-  caret-color: var(--accent-color);
-  background: none;
+    box-sizing: border-box;
+    border-radius: 750px;
+    padding: 10px 20px;
+    width: 100%;
+    border: 2px solid var(--secondary-color);
+    font: inherit;
+    color: var(--text-color);
+    caret-color: var(--accent-color);
+    background: none;
 }
 
 #todo-input:focus {
-  outline: none;
+    outline: none;
 }
 
 button,
 label,
 input {
-  cursor: pointer;
-  border-radius: 750px;
+    cursor: pointer;
+    border-radius: 750px;
 }
 
-form {
-  position: relative;
+#todo-form {
+    position: relative;
 }
 /* add-button was not within the form and making the form relative makes button position inside the form top right side */
 #add-button {
-  position: absolute;
-  top: 0;
-  right: 0;
-  border-radius: 750px;
-  background-color: var(--accent-color);
-  height: 100%;
-  font: inherit;
-  font-weight: 700;
-  color: var(--background);
-  width: 17%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 750px;
+    background-color: var(--accent-color);
+    height: 100%;
+    font: inherit;
+    font-weight: 700;
+    color: var(--background);
+    width: 17%;
 }
 
 .todo {
-  margin: 10px;
-  padding: 0 16px;
-  background-color: var(--primary-color);
-  color: var(--text-color);
-  border-radius: 750px;
-  display: flex;
-  align-items: center;
+    margin: 10px;
+    padding: 0 16px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border-radius: 750px;
+    display: flex;
+    align-items: center;
 }
 
 .todo .todo-text {
-  padding: 12px;
-  padding-right: 0;
-  flex-grow: 1; /* Take as much space in parent element*/
-  transition: 300ms ease;
+    padding: 12px;
+    padding-right: 0;
+    flex-grow: 1; /* Take as much space in parent element*/
+    transition: 300ms ease;
 }
 
 .delete-button,
 .update-button {
-  padding: 4px;
-  background: none;
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: medium;
-  color: var(--text-color);
+    padding: 4px;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: medium;
+    color: var(--text-color);
 }
 
 .delete-button:hover {
-  color: red;
+    color: red;
 }
 
 .update-button:hover {
-  color: var(--accent-color);
+    color: var(--accent-color);
 }
 
 input[type="checkbox"] {
-  appearance: none;
-  width: 20px;
-  height: 20px;
-  border: 2px solid var(--secondary-color);
-  border-radius: 750px;
-  flex-shrink: 0;
-  transition: 300ms ease;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 750px;
+    flex-shrink: 0;
+    transition: 300ms ease;
 }
 
 input[type="checkbox"]:checked {
-  background-color: var(--accent-color);
+    background-color: var(--accent-color);
 }
 
 input[type="checkbox"]:checked ~ .todo-text {
-  text-decoration: line-through;
-  color: var(--secondary-color);
+    text-decoration: line-through;
+    color: var(--secondary-color);
 }
 
+#update-form {
+    background-color: white;
+    width: 75%;
+    height: 100px;
+}
 /* Make responsive in future */
