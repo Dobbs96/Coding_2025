@@ -4,7 +4,8 @@ const parenthesisArr = Array.from(
     document.getElementsByClassName("parenthesis")
 );
 const numberStrs = "0123456789".split("");
-const clear = document.querySelector(".clear");
+const clearButton = document.querySelector(".clear");
+const equalButton = document.querySelector(".equals");
 
 const data = {
     displayString: "0",
@@ -87,7 +88,15 @@ parenthesisArr.map((elem, i) => {
     });
 });
 
-clear.addEventListener("click", () => {
+clearButton.addEventListener("click", () => {
     data.displayString = 0;
     data.updateDisplay();
+});
+
+equalButton.addEventListener("click", () => {
+    // take string to array
+    let newArray = data.displayString.split("");
+    console.log(newArray);
+    // read string and when at operator
+    //// + add, - subtract, / divide, * multiple
 });
