@@ -1,5 +1,14 @@
 {
-  "dependencies": {
-    "firebase": "^11.8.1"
-  }
+    "name": "your-app-name",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "build": "node ./esbuild.config.js"
+    },
+    "devDependencies": {
+        "esbuild": "^latest"
+    },
+    "dependencies": {
+        "firebase": "^9.0.0"
+    }
 }
